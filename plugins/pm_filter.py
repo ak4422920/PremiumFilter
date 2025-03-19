@@ -440,8 +440,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f"https://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton('💥 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs 💥', url='https://t.me/+5aoApavIMVo1YzQ1'),
-            InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url='https://t.me/TamilanMoviesChat')
+            InlineKeyboardButton('💥 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs 💥', url='https://t.me/botmovieupdate'),
+            InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url='https://t.me/movie_seriesgroup')
             ],[
             InlineKeyboardButton('😅 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 😊', callback_data='sources')
             ],[
@@ -457,7 +457,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
          )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Uᴩᴅᴀᴛᴇs 😜', url='https://t.me/Tamilan_BotsZ'),
+            InlineKeyboardButton('🤖 Uᴩᴅᴀᴛᴇs 😜', url='https://t.me/AKMovieBotz'),
             InlineKeyboardButton('♥️ Sʜᴀʀᴇ Mᴇ 💫', url=f"https://t.me/share/url?url=t.me/{temp.U_NAME}")
         ], [
             InlineKeyboardButton('🔭 Sᴛᴀᴛs 📊', callback_data='stats'),
@@ -495,7 +495,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ],[
             InlineKeyboardButton('🔭 Sᴛᴀᴛs 📊', callback_data='stats')
         ],[
-            InlineKeyboardButton('😊 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ ☺', url='https://Github.com/TamilanBotsZ/PremiumFilter')
+            InlineKeyboardButton('😊 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ ☺', url='https://t.me/AKMovieBotz')
         ],[
             InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='about')
         ]]       
@@ -578,7 +578,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sources":
         buttons = [[
 
-            InlineKeyboardButton('😊 Rᴇᴩᴏ 😊', url='https://Github.com/TamilanBotsZ/PremiumFilter')
+            InlineKeyboardButton('😊 Rᴇᴩᴏ 😊', url='https://t.me/AKMovieBotz')
         ], [
             InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='start')
         ]]
@@ -591,7 +591,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "source":
         buttons = [[
 
-            InlineKeyboardButton('😊 Rᴇᴩᴏ 😊', url='https://Github.com/TamilanBotsZ/PremiumFilter')
+            InlineKeyboardButton('😊 Rᴇᴩᴏ 😊', url='https://Github.com')
         ], [
             InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='about')
         ]]
@@ -603,7 +603,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "info":
         buttons = [[
-            InlineKeyboardButton('😪 Hᴏᴡ Tᴏ Oᴩᴇɴ Mʏ Lɪɴᴋs 💢', url='https://t.me/Sharath_Links/13')
+            InlineKeyboardButton('😪 Hᴏᴡ Tᴏ Oᴩᴇɴ Mʏ Lɪɴᴋs 💢', url='https://t.me/akhowtoopenlinks/45')
         ], [
             InlineKeyboardButton('📞 Cᴏɴᴛᴀᴄᴛ 📟', callback_data='contact')
         ], [
@@ -617,9 +617,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "contact":
         buttons = [[
-            InlineKeyboardButton('😳 Cʀᴇᴀᴛᴏʀ 😳', url='https://t.me/SharathItsIsMe')
+            InlineKeyboardButton('😳 Cʀᴇᴀᴛᴏʀ 😳', url='https://t.me/AKMovieBotz')
         ], [     
-            InlineKeyboardButton('📞 Cᴏɴᴛᴀᴄᴛ 📟', url='https://t.me/TamilanBotsZ_Support')
+            InlineKeyboardButton('📞 Cᴏɴᴛᴀᴄᴛ 📟', url='https://t.me/ak_ownerbot')
         ], [  
             InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='about')
         ], [
@@ -733,10 +733,10 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                await client.send_message(file_req_channel,f"-🦋 #REQUESTED_FILE 🦋-\n\n📝Fɪʟᴇ Nᴀᴍᴇ :{search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ: {message.from_user.first_name}\n\n Usᴇʀ Iᴅ :{message.from_user.id}\n\n🗃Cᴏᴅᴇᴅᴇᴅ Bʏ  @Tamilan_BotsZ",
+                await client.send_message(file_req_channel,f"-🦋 #REQUESTED_FILE 🦋-\n\n📝Fɪʟᴇ Nᴀᴍᴇ :{search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ: {message.from_user.first_name}\n\n Usᴇʀ Iᴅ :{message.from_user.id}\n\n🗃Cᴏᴅᴇᴅᴇᴅ Bʏ  @akmoviebotz",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Fɪʟᴇ Uᴩʟᴏᴀᴅᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ 🔺", callback_data="close_data")]]))
-                l = await message.reply_text(text=f"△ Hᴇʏ Fʀɪᴇɴᴅ {message.from_user.first_name} 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ !\n\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝Cᴏɴᴛᴇɴᴛ Nᴀᴍᴇ : {search}\n\n➟ 👮 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ Yᴏᴜ : {message.from_user.first_name}\n\n༺ @TamilanBotsZSupport༻\n\n🦋・‥☆Sᴜᴩᴩᴏʀᴛ Oᴜʀ Cʜᴀɴɴᴇʟ ☆‥・🦋\n╰┈➤・☆ @SharathItsIsMe ☆",
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("━ • │▌║  Aᴅᴅ Mᴇ Tᴏ Uʀ Gʀᴏᴜᴩ  ║▌│ • ━", url=f'http://t.me/{temp.U_NAME}?startgroup=true')],[InlineKeyboardButton("✪ Tᴀᴍɪʟᴀɴ Bᴏᴛs ✪", url="https://t.me/Tamilan_BotsZ"), InlineKeyboardButton("✪ Sᴜᴩᴩᴏʀᴛ Gʀᴏᴜᴩ ✪", url="https://t.me/TamilanBotsZ_Support"), InlineKeyboardButton("✪ Rᴇᴩᴏ ✪", url="https://Github.com/TamilanBotsZ/PremiumFilter")],[InlineKeyboardButton("╚»♥️Dᴇʟᴇᴛᴇ Tʜɪs Mᴇssᴀɢᴇ ♥️«╝", callback_data="close_data")]]))
+                l = await message.reply_text(text=f"△ Hᴇʏ Fʀɪᴇɴᴅ {message.from_user.first_name} 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ !\n\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝Cᴏɴᴛᴇɴᴛ Nᴀᴍᴇ : {search}\n\n➟ 👮 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ Yᴏᴜ : {message.from_user.first_name}\n\n༺ @Akmoviebotz༻\n\n🦋・‥☆Sᴜᴩᴩᴏʀᴛ Oᴜʀ Cʜᴀɴɴᴇʟ ☆‥・🦋\n╰┈➤・☆ @Cineoriginals ☆",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("━ • │▌║  Aᴅᴅ Mᴇ Tᴏ Uʀ Gʀᴏᴜᴩ  ║▌│ • ━", url=f'http://t.me/{temp.U_NAME}?startgroup=true')],[InlineKeyboardButton("✪ Bᴏᴛz ✪", url="https://t.me/AKMovieBotz"), InlineKeyboardButton("✪ Sᴜᴩᴩᴏʀᴛ Gʀᴏᴜᴩ ✪", url="https://t.me/+fWqiUAqXU5BiNjk1"), InlineKeyboardButton("✪ Rᴇᴩᴏ ✪", url="https://Github.com")],[InlineKeyboardButton("╚»♥️Dᴇʟᴇᴛᴇ Tʜɪs Mᴇssᴀɢᴇ ♥️«╝", callback_data="close_data")]]))
                 await asyncio.sleep(12)
                 await l.delete()
                 if settings["spell_check"]:
